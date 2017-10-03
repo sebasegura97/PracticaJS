@@ -57,3 +57,16 @@
     // UNIR ARRAY PARA CONVERTIRLO EN string
     let arr = ['h','o','l','a']
     const str =  arr.join('')
+
+  // FUNCIONES MATEMATICAS´
+    math.floor//rendondea hacia abajo 3.9 = 3
+    math.ceil//redondea para arriba 3.1 = 4
+    math.round// redondea dependiendo 3.1 = 3, 3.5 = 4
+
+  // CICLOS
+    for (variable iteradora; condicion ; iterción ) {
+    	Bloque de código a ejecutar si la condiciónse cumple
+    }
+    while (true) {
+
+    }
