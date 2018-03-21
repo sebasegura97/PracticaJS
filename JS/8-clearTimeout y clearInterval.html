@@ -1,0 +1,55 @@
+<!-- usamos el mismo codigo de set interval, pero agregamos un boton para parar el contador -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Set timer</title>
+    <style media="screen">
+      #timeOut{
+        background-color: blue;
+        font-size: 24pt;
+      }
+
+      #stop{
+        font-size: 24pt;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" id="timeOut">Si no me presionas me pondré rojo</button>
+    <h1>Han pasado <span id="timer">0</span> segundos </h1>
+    <button type="button" id="stop">Stop</button>
+    <script type="text/javascript">
+
+    // setTimeout
+
+    const boton = document.getElementById('timeOut')
+
+    const timeOut = setTimeout(() => {
+      boton.style = "background-color: red"
+    }, 2000)  // Asignamos el setTimeout a una constante para poder cancelarlo cuando se haga click
+
+    boton.addEventListener('click', () => {
+      clearTimeout(timeOut) // cancelamos el timeout
+    })
+
+    // setInterval
+
+      const timer = document.getElementById('timer')
+      var counter = timer.innerHTML // Tener en cuenta que "timer" es un objeto "span" por lo que hay que acceder al numero mediante innerHTML
+
+      const interval = setInterval(() => {
+        counter++
+        timer.innerHTML = counter;
+      }, 1000)
+
+      const stop = document.getElementById('stop')
+
+      stop.addEventListener('click', () => {
+        clearInterval(interval)
+      })
+
+    </script>
+  </body>
+</html>

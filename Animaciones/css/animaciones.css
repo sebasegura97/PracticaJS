@@ -1,11 +1,8 @@
 /*ANIMACIONES
 
 animation-name: pelota;
-
 animation-duration: 1s;
-
 animation-iteration-count: infinte | 2; -Es el numero de veces que se repetira la animacion
-
 animation-timing-function: ease;
 animation-timing-function: ease-in;
 animation-timing-function: ease-out;
