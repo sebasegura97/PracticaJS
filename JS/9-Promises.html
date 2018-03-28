@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Promises</title>
+  </head>
+  <body>
+    <h1 id="agenda">Estoy despertando</h1>
+    <script type="text/javascript">
+      const DESPERTAR = 3000;
+      const DUCHA = 2000;
+      const VESTIRSE = 2000;
+      const DESAYUNAR = 3000;
+      const PLATZI = 5000;
+      const $agenda = document.getElementById('agenda');
+
+
+      // const despertar = new Promise(function(resolve, reject) => {}); // una promesa recibe como parametro una funcion que a su vez tiene dos parametros, una funcion (resolve) que se ejecuta si todo esta bien y otra (reject) que se ejecuta si todo esta mal
+
+      const despertar = new Promise(function(resolve, reject) {
+        setTimeout(()=>{
+          resolve('Ahora me estoy duchando') // resolve enviara en la variable message el mensaje 'Ahora me estoy duchando', la cual puede servir como parametro para .then y .catch, como vemos a continuacion
+          // reject('Todo mal, sorry estoy enfermo')
+        }, DESPERTAR)
+      })
+
+      // despertar.then(que hago si esta todo ok), esto quiere decir que se ejecuto la funcion resolve
+      // despertar.catch(que hago si esta todo mal), esto quiere decir que se ejecuto la funcion reject
+      // A continuacion la forma "larga" de usar then y catch
+
+      // despertar.then((message)=>{
+      //   console.log(message)
+      // })
+      // despertar.catch((message)=>{
+      //   console.log(message)
+      // })
+
+      // La corta: consiste en anidar then y catch, llamando solo una vez a despertar:
+
+      despertar
+      .then((message) =>{
+        console.log(message)
+      })
+      .catch((message) =>{
+        console.log(message)
+      })
+
+
+
+
+
+    </script>
+  </body>
+</html>

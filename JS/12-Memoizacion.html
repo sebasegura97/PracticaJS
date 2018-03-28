@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Memoizacion</title>
+  </head>
+  <body>
+      <h1>Memoizacion</h1>
+      <p>Tecnica recursiva que consiste en agregar un parametro llamado "memoria" que va almacenando los resultados</p>
+      <script type="text/javascript">
+          var contador = 0 //Servira para comparar cuantas veces llamamos  a la funcion con este metodo
+          function  fibonacci(num, memoria = {}){
+            contador++
+            if (memoria[num]) return  memoria[num]
+            if (num == 1) return  0
+            if (num == 2) return 1
+            return  memoria[num] = fibonacci(num - 1, memoria) + fibonacci(num - 2, memoria)
+          }
+      </script>
+  </body>
+</html>
