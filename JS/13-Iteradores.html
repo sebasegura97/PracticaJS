@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Iteradores</h1>
+    <p>Los iteradores nos permitiran crear listas infinitas de elementos</p>
+    <script>
+      function fibonacci(){
+        let a = 0, b = 1
+        return  {
+          next: function(){
+            let f = a;
+            a = b;
+            b = f + a;
+            return {value: f, done: false}
+          }
+        }
+      }
+      //Segun sacha esto sirve para poder iterar en el ciclo for:
+      const fibo = {nombre: 'Seba'}
+      fibo[Symbol.iterator] = fibonacci
+      //Esto mostrara los primeros 20 valores de la serie de fibonacci:
+      let i = 0
+      for (let value of fibo) {
+        console.log(value)
+        i++
+        if (i > 20) {break}
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Olas</title>
+    <style media="screen">
+      body{
+        margin: 0;
+      }
+      .container{
+        /* position: absolute; */
+        position: relative;
+        height: 500px;
+        background-color: #0f9bf6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .content{
+        font-family: arial;
+        text-align: center;
+        font-size: 2em;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .waves{
+        overflow: hidden;
+        position: absolute;
+        bottom: -135px;
+        height: 527px;
+        width: 100%;
+      }
+
+      .wave{
+        width: 2420px;
+        height: 427px;
+        position: absolute;
+        background: url('images/waves.png') center bottom no-repeat;
+        animation: 4s wave ease-in-out infinite alternate;
+        left: -180px;
+        bottom: 0;
+      }
+      .wave.a{
+        background-position: 0 -854px;
+      }
+      .wave.b{
+        background-position: 0 -427px;
+        animation-delay: .6s;
+      }
+      .wave.c{
+        background-position: 0 0;
+        animation-delay: 1s
+      }
+      @keyframes wave {
+        0%{transform: translate(0,0);}
+        50%{transform: translate(-80px, 30px);}
+        100%{transform: translate(160px,-60px);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Hola mundo</h1>
+        <p>Estoy en el curso de animaciones para web</p>
+      </div>
+      <div class="waves">
+        <div class="wave a"></div>
+        <div class="wave b"></div>
+        <div class="wave c"></div>
+      </div>
+    </div>
+  </body>
+</html>
