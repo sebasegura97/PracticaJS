@@ -8,7 +8,7 @@
       <h1>Memoizacion</h1>
       <p>Tecnica recursiva que consiste en agregar un parametro llamado "memoria" que va almacenando los resultados</p>
       <script type="text/javascript">
-          var contador = 0 //Servira para comparar cuantas veces llamamos  a la funcion con este metodo
+          let contador = 0 //Servira para comparar cuantas veces llamamos  a la funcion con este metodo
           function  fibonacci(num, memoria = {}){
             contador++
             if (memoria[num]) return  memoria[num]
