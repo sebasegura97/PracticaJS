@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Olas</title>
+    <style media="screen">
+      body{
+        margin: 0;
+      }
+      .circulo{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        animation: 3s wave infinite alternate ease;
+      }
+      .b{
+        animation-delay: .6s;
+      }
+      .a{animation-delay: 1s}
+      .container{
+        position: absolute;
+      }
+      @keyframes wave {
+        0%{transform: translate(0,0);}
+          100%{transform: translate(200px,100px);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circulo a"></div>
+      <div class="circulo b"></div>
+      <div class="circulo c"></div>
+    </div>
+  </body>
+</html>
