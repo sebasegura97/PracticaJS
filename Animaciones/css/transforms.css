@@ -11,25 +11,9 @@ TRANSLATE:
 transform: translate (x,y)
 transform: translateX (100px)
 transform: translateY (-100px)
+Sesgar = transform: skew(60deg)
 
-SKEW:
-transform: skew(x,y)
-transform: skew(40deg) -Solo para X
-transform: skew(30deg,15deg)
-
-SCALE:
-transform: scale(x,y)
-transform: scale(2,.5)
-transform: scale(1.5)
-
-TRANSFORM-ORIGIN:
-es el punto de origen de la transformacion, osea desde donde comienza
-EL VALOR POR DEFECTO ES: transform-orgin: 50%, 50%;
-transform-origin: x,y;
-transform-origin: 0%, 50%;
-transform-origin: top | right | bottom | left;
-transform-origin: left top;
-
+Cambiar tamaño = transform: scale(1 = 100%, 2 = 200%)
 */
 body{
   display: flex;
@@ -45,7 +29,7 @@ body{
   border: 1px solid red;
 }
 .pelota{
-  transition: 5s;
+  transition: 1s;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -65,15 +49,14 @@ body{
 }
 
 .container:hover .pelota.a{
-  left: calc(50% - 200px);
-  transform: rotate(720deg) skew(40deg,20deg);
-  /*transform: translateY(100px);*/
+  left: calc(50% - 100px);
   /*left: 50%;*/
+  transform: rotate(720deg);
+  transform: translateY(100px);
 }
 .container:hover .pelota.b{
-  right: calc(50% - 200px);
-  transform: rotate(-720deg) scale(1, 4);
-  /*transform-origin: bottom;*/
+  right: calc(50% - 100px);
   /*right: 50%;*/
-  /*transform: translateY(-100px);*/
+  transform: rotate(-720deg);
+  transform: translateY(-100px);
 }
