@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Demo de maquetacion </title>
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <style media="screen">
+      body{
+        font-family: Arial;
+        /* margin: 0; */
+      }
+      .container{
+        display: grid;
+        grid-template-columns: [inicio]
+                               1fr
+                               [linea-2]
+                               1fr
+                               [linea-3]
+                               1fr
+                               [destacado-end]
+                               1fr
+                               [linea-4]
+                               1fr
+                               [destacado2-end]
+                               1fr
+                               [linea-7]
+                               1fr
+                               [final];
+        grid-template-rows: [inicio]
+                            200px
+                            [inicio2]
+                            200px
+                            [final];
+        grid-gap: 5px;
+        height: 100vh;
+        /* grid-auto-flow: column; */
+        /* grid-auto-columns: 50px 100px; */
+        /* grid-auto-rows: Establece el patron de filas implicitas (las no manejadas por nosotros) */
+        grid-auto-rows: 50px 100px;
+      }
+      .item{
+        background: lightblue;
+        padding: 10px;
+        border: 1px solid red;
+      }
+      .item:nth-of-type(1){
+        /* grid-column: 1 / span 3;
+        grid-row: 1 / span 2; */
+        grid-column: inicio / destacado-end;
+        grid-row: inicio / final;
+      }
+      .item:nth-of-type(2){
+        /* grid-column: 4 / span 2;
+        grid-row: 1 / span 2; */
+        grid-column: destacado-end / destacado2-end;
+        grid-row: inicio / final;
+
+
+      }
+      .item:nth-of-type(3){
+        /* grid-column: 6 / span 2; */
+        grid-column: destacado2-end / final;
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="item"> Item #1 </div>
+      <div class="item"> Item #2 </div>
+      <div class="item"> Item #3 </div>
+      <div class="item"> Item #4 </div>
+      <div class="item"> Item #5 </div>
+      <div class="item"> Item #5 </div>
+      <div class="item"> Item #5 </div>
+      <div class="item"> Item #5 </div>
+      <div class="item"> Item #5 </div>
+      <div class="item"> Item #5 </div>
+      <div class="item"> Item #5 </div>
+      <div class="item"> Item #5 </div>
+      <div class="item"> Item #5 </div>
+    </section>
+  </body>
+</html>

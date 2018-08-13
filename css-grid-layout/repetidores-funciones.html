@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> CSS Grid Layout</title>
+    <title> Repetidores, unidades de medida y funciones </title>
     <!-- <link rel="stylesheet" href="./css/index.css"> -->
     <style media="screen">
       body{
@@ -10,16 +10,10 @@
       }
       .container{
         display: grid;
-        /* grid-template-columns: 50% 50%; */
-        /* grid-template-rows: 100px 100px; */
-        /* grid-template: filas / columnas; */
-        /* grid-column-gap: Espaciado entre columnas */
-        /* grid-file-gap: Espaciado entre fil as */
-        grid-template: 100px 100px 100px / 1fr .5fr;
-        /* grid-row-gap: 20px; */
-        /* grid-column-gap: 20px; */
-        /* grid-gap: filas columnas */
-        grid-gap: 10px 100px;
+        /* grid-template: 100px 100px 100px / 1fr .5fr; */
+        /* grid-template: 300px 100px 100px  / repeat(4, minmax(200px, 1fr)); */
+        grid-template: 300px 100px 100px  / minmax(200px, 1fr) 1fr 1fr 1fr;
+        grid-gap: 10px 20px;
       }
       .item{
         background: lightblue;

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Instagram layout</title>
+    <style media="screen">
+      body{
+        margin: 0;
+        font-family: Arial;
+      }
+      .post{
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aquamarine;
+      }
+      .post-list{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 293px));
+        justify-content: center;
+        grid-gap: 28px;
+
+      }
+      .post-image{
+        margin: 0;
+        background-color: salmon;
+      }
+      .post-image img{
+        width: auto;
+        max-height: 300px;
+        vertical-align: top;
+      }
+      .post-overlay{
+        background: rgba(0, 0, 0, .4);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+      }
+      .post:hover .post-overlay{
+        display: flex;
+      }
+      .post-likes, .post-comments{
+        width: 80px;
+        margin: 5px;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+      }
+      @media screen and (max-width: 768px) {
+        .post-list{
+          grid-gap: 3px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="post-list">
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/plantaSinFondo.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/Velashape@3x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/WomanSeccion1@2x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/plantaSinFondo.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/Velashape@3x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/WomanSeccion1@2x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/plantaSinFondo.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/Velashape@3x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/WomanSeccion1@2x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/plantaSinFondo.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/Velashape@3x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/WomanSeccion1@2x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/plantaSinFondo.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/Velashape@3x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+      <a href="" class="post">
+        <figure class="post-image">
+          <img src="./images/WomanSeccion1@2x.png" alt="">
+        </figure>
+        <div class="post-overlay">
+          <p>
+            <span class="post-likes">150</span>
+            <span class="post-comments">10</span>
+          </p>
+        </div>
+      </a>
+    </section>
+  </body>
+</html

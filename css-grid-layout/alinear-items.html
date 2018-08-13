@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Demo de maquetacion </title>
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <style media="screen">
+      body{
+        font-family: Arial;
+        /* margin: 0; */
+      }
+      .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 5px;
+        height: 100vh;
+        /* justify-items: start end center stretch; */
+        /* align-items: start end center stretch;  */
+        justify-items: center;
+        align-items: center;
+      }
+      .item{
+        background: lightblue;
+        padding: 10px;
+        border: 1px solid red;
+      }
+      .item:nth-of-type(5){
+        align-self: start;
+        justify-self: start;
+      }
+
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="item"> Item #1 </div>
+      <div class="item"> Item #2 </div>
+      <div class="item"> Item #3 </div>
+      <div class="item"> Item #4 </div>
+      <div class="item"> Item #5 </div>
+      <div class="item"> Item #6 </div>
+      <div class="item"> Item #7 </div>
+      <div class="item"> Item #8 </div>
+      <div class="item"> Item #9 </div>
+      <div class="item"> Item #10 </div>
+      <div class="item"> Item #11 </div>
+      <div class="item"> Item #12 </div>
+    </section>
+  </body>
+</html>

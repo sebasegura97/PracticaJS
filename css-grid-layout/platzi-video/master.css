@@ -1,0 +1,80 @@
+body{
+  color: white;
+  font-family: lato;
+  margin: 0;
+  font-weight: 300;
+  width: 80%;
+  background-color: rgb(22,25,41);
+  margin: auto;
+}
+p{
+  color: white;
+}
+figure{
+  margin: 0;
+}
+.container{
+  display: grid;
+  grid-template-rows: auto 500px;
+  grid-template-columns: minmax(150px, .5fr) 1fr minmax(100px, 300px) ;
+  /* grid-template-areas: "nav-bar video video "
+                       "nav-bar content sugerencias "
+                       "nav-bar content sugerencias "; */
+}
+.nav-bar{
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  /* grid-area: nav-bar; */
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgb(22, 25, 41);
+}
+.video-container{
+  /* grid-area: video; */
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+.video-container video{
+  width: 100%;
+}
+.content{
+  /* grid-area: content; */
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  /* height: 500px; */
+  background: white;
+}
+.logo {
+  /* max-width: 150px; */
+  width: 100%;
+}
+.playlist span{
+  margin-right: 5px;
+}
+.playlist-friends div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+.playlist-friends div img{
+  max-width: 40px;
+  margin-right: 5px;
+}
+.sugerencias{
+  /* grid-area: sugerencias; */
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  padding: 0 20px 0 20px;
+  height: 100%;
+  overflow-y: scroll;
+}
+.sugerencias-item{
+  max-width: 100%;
+
+}
+.sugerencias-item video{
+  width: 100%;
+}
